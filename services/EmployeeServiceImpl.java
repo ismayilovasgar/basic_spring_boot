@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
+@Service("employeeServiceHibernate")
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired

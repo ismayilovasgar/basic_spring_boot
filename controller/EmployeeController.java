@@ -1,7 +1,8 @@
 package com.ismayilov.springboot.first_app.controller;
 
 import com.ismayilov.springboot.first_app.entity.Employee;
-import com.ismayilov.springboot.first_app.services.EmployeeService;
+//import com.ismayilov.springboot.first_app.services.EmployeeService;
+import com.ismayilov.springboot.first_app.servicesJPA.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,11 @@ public class EmployeeController {
     @GetMapping("/employees")
     public List<Employee> saveEmployee() {
         return employeeService.getAllEmployees();
+    }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> getEmployeeByName(@PathVariable String name) {
+        return employeeService.findAllByName(name);
     }
 
     @GetMapping("/employees/{id}")
