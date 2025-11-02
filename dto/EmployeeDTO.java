@@ -1,7 +1,6 @@
 package com.ismayilov.springboot.first_app.dto;
 
 import org.springframework.stereotype.Component;
-
 import java.io.Serializable;
 
 @Component
